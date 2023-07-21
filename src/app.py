@@ -80,7 +80,7 @@ def delete_users(user_id):
 
     user1 = User.query.get(user_id)
     if user1 is None:
-        raise APIException('watafak! no encontrado...', status_code=404)
+        raise APIException('no encontrado...', status_code=404)
     db.session.delete(user1)
     db.session.commit()
     return jsonify('user correctamente borrado'), 200
