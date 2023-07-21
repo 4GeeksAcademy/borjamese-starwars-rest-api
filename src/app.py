@@ -61,7 +61,7 @@ def add_users():
     db.session.commit()
     return jsonify('user added:', request_body_user), 200
 
-# edith user
+# edit user
 @app.route('/user/<int:user_id>', methods=['PUT'])
 def update_users(user_id):
 
